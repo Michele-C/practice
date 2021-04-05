@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            background-color: greenyellow;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        #styleit {
+            text-align: center;
+        }
+        
+        #box {
+            background-color: hotpink;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        [type="button"] {
+            background-color: lightgreen;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 10px;
+            margin-bottom: 10px;
+ }
+     </style>
+    <script>
+        function addItem() {
+            var newItem = document.createElement("div");
+            newItem.innerHTML = document.getElementById("box").value;
+            document.getElementById("list").appendChild(newItem);
+            newItem.onclick = removeItem;
+        }
+
+        function removeItem() {
+            document.getElementById("list").removeChild(this);
+        }
+    
+    </script>
+</head>
+<body>
+    <p> Special Exhibition To-Do List</p>
+    <div id="styleit">
+    <input type="text" id="box" placeholder="Type here to add an item" />
+</br>
+    <input type="button" value="Add Item" onclick="addItem();"/>
+    </div>
+    <div id="list">
+</div>
+
+</body>
+</html>
