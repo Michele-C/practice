@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
+    <title>Document</title>
     <style>
         p {
             background-color: greenyellow;
@@ -31,8 +31,8 @@
             margin-bottom: 10px;
  }
      </style>
-   <!-- <script>
-         function addItem() {
+    <script>
+        function addItem() {
             var newItem = document.createElement("div");
             newItem.innerHTML = document.getElementById("box").value;
             document.getElementById("list").appendChild(newItem);
@@ -44,27 +44,18 @@
         }
     
     </script>
---> 
-<script>
-    function save(){
-        var newItem = document.getElementById("box").value;
-        localStorage.box = newItem;
-    }
-    function load(){
-        var savedDiv = document.getElementById("savedList");
-        savedDiv.innerHTML = localStorage.box;
-    } 
-</script>
 </head>
 <body>
+    <p> Special Exhibition To-Do List</p>
     <div id="styleit">
     <input type="text" id="box" placeholder="Type here to add an item" />
+
 <br/>
-    <input type="button" id="save" value="Save" onclick="save();"/>
-    <input type="button" id="load" value="Load" onclick="load();"/>
+
+    <input type="button" value="Add Item" onclick="addItem();"/>
+    </div>
+    <div id="list">
 </div>
-<br/>
-Saved item:    <div id="savedList"></div>
 
 </body>
 </html>
