@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: darkseagreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-transform: uppercase;
+        }
+        .centre{
+            background-color: lavenderblush;
+            width: 400px;
+            margin-left: 90px;
+            text-align: center;
+            clear: both;
+            padding-bottom: 10px;
+        }
+        #button {
+            background-color: hotpink;
+            padding: 10px;
+        } 
+         </style>
+    <script>
+        function addITEM(){
+            var newItem = document.createElement("div");
+            newItem.innerHTML = document.getElementById("box").value;
+            document.getElementById("list").appendChild(newItem);
+            newItem.onclick = removeItem;
+    
+        }
+        function removeItem(){
+            document.getElementById("list").removeChild(this); 
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Lets Shop Baby!</h1>
+    <div class="centre">
+        <p>Add the required items into the box and click on the pink button to create your shopping list! </p>
+        <input type="text" id="box" placeholder="Please add your items here" />
+        </div>
+        <center><input type="button" id="button" onclick="addITEM();" value="Click Here to add item"/>
+        </center>
+        <br/>
+        
+            <strong>This is your up to-date list:</strong>
+<div id="list">
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game baby
+    </title>
+    <link rel="stylesheet" href="mystyle.css">
+   <!-- <script> src = "works.js" </script>-->
+   <script>
+       function game(){
+            gameLoop();
+       }
+       var loops = 0;
+       function gameLoop() {
+           loops++;
+
+if( loops< 5){
+    alert(loops);
+setTimeout(gameLoop, 3000);
+}
+else {
+    alert("Game Over!");
+}
+}
+   </script>
+</head>
+
+<body>
+    <input type="button" id="butt" value="Start Game" onclick="game()" />
+    <div id="board">
+
+        <div class="character">1</div>
+        <div class="character">2</div>
+        <div class="character">3</div>
+        <div class="character">4</div>
+        <div class="character">5</div>
+        <div class="character">6</div>
+
+    </div>
+
+
+</body>
+
+</html>
